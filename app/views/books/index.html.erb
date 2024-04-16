@@ -1,2 +1,24 @@
-<h1>新規投稿</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<h1>New Book</h1>
+
+<%= form_with model: @book, url: books_path, method: :post do |f| %>
+  <div class="field">
+    <%= f.label :Title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :Opinion %><br>
+    <%= f.text_area :opinion %>
+  </div>
+  <%= f.submit "Create Book" %>
+<% end %>
+
+
+
+<h1>Books</h1>
+
+<% @books.each do |book| %>
+  <p>
+    <%= book.title %>
+    <%= book.opinion %>
+  </p>  
+<% end %>
