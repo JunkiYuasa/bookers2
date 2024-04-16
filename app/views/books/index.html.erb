@@ -16,13 +16,6 @@
 
 <h1>Books</h1>
 
-<% @books.each do |book| %>
-  <p>
-    <%= link_to book.title, book_path(book.id) %>
-    <%= book.opinion %>
-  </p>  
-<% end %>
-
 <table>
   <tr>
     <th>UserImage</th>
