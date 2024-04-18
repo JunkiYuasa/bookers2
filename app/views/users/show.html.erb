@@ -1,5 +1,12 @@
 <div class="message"><%= flash[:notice] %></div>
 
-<%= render "users/info", user: @user, book: @book %>
-
-<%= render "books/list", books: @books %>
+<div class="container px-5">
+  <div class="row px-3 py-4">
+    <div class="col-md-3">
+      <%= render "users/info", user: @user, book: @book %>
+    </div>
+    <div class="col-md-8 offset-1">
+      <%= render "books/list", books: @books %>
+    </div>
+  </div>
+</div>
